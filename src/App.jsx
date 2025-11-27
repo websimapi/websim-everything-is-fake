@@ -1,5 +1,6 @@
 import { Fragment, jsxDEV } from "react/jsx-dev-runtime";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { createRoot } from "react-dom/client";
 import { subscribeToFeed, addAssetToUser, initUserRecord } from "./utils/db.js";
 import AssetItem from "./components/AssetItem.jsx";
 const App = () => {
@@ -70,31 +71,24 @@ const App = () => {
     }
   };
   return /* @__PURE__ */ jsxDEV("div", { className: "flex flex-col h-full bg-black text-white relative", children: [
-    /* @__PURE__ */ jsxDEV("header", { className: "h-14 flex items-center justify-between px-4 border-b border-gray-900 bg-black/80 backdrop-blur-md sticky top-0 z-10", children: [
-      /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
-        /* @__PURE__ */ jsxDEV("div", { className: "w-3 h-3 bg-green-500 rounded-full animate-pulse" }, void 0, false, {
-          fileName: "<stdin>",
-          lineNumber: 89,
-          columnNumber: 21
-        }),
-        /* @__PURE__ */ jsxDEV("h1", { className: "font-bold text-lg tracking-wider glitch-text", "data-text": "FAKE_OS", children: "FAKE_OS" }, void 0, false, {
-          fileName: "<stdin>",
-          lineNumber: 90,
-          columnNumber: 21
-        })
-      ] }, void 0, true, {
+    /* @__PURE__ */ jsxDEV("header", { className: "h-14 flex items-center justify-between px-4 border-b border-gray-900 bg-black/80 backdrop-blur-md sticky top-0 z-10", children: /* @__PURE__ */ jsxDEV("div", { className: "flex items-center gap-2", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "w-3 h-3 bg-green-500 rounded-full animate-pulse" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 88,
-        columnNumber: 17
+        lineNumber: 90,
+        columnNumber: 21
       }),
-      /* @__PURE__ */ jsxDEV("div", { className: "text-xs text-gray-500 font-mono", children: "v0.1.0" }, void 0, false, {
+      /* @__PURE__ */ jsxDEV("h1", { className: "font-bold text-lg tracking-wider glitch-text", "data-text": "FAKE_OS", children: "FAKE_OS" }, void 0, false, {
         fileName: "<stdin>",
-        lineNumber: 92,
-        columnNumber: 17
+        lineNumber: 91,
+        columnNumber: 21
       })
     ] }, void 0, true, {
       fileName: "<stdin>",
-      lineNumber: 87,
+      lineNumber: 89,
+      columnNumber: 17
+    }) }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 88,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("main", { className: "flex-1 overflow-y-auto feed-scroll p-4 pb-24", children: feed.length === 0 ? /* @__PURE__ */ jsxDEV("div", { className: "h-full flex flex-col items-center justify-center text-gray-600 gap-4", children: [
@@ -354,10 +348,17 @@ const App = () => {
     })
   ] }, void 0, true, {
     fileName: "<stdin>",
-    lineNumber: 85,
+    lineNumber: 86,
     columnNumber: 9
   });
 };
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(/* @__PURE__ */ jsxDEV(App, {}, void 0, false, {
+  fileName: "<stdin>",
+  lineNumber: 227,
+  columnNumber: 13
+}));
 var stdin_default = App;
 export {
   stdin_default as default
